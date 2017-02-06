@@ -9,12 +9,12 @@
     "spy"
   ],
   "license": "MIT",
-  "homepage": "http://github.com/nene/spies",
+  "homepage": "https://github.com/zeroturnaround/strict-spies",
   "repository": {
     "type": "git",
-    "url": "git://github.com/nene/strict-spies.git"
+    "url": "git://github.com/zeroturnaround/strict-spies.git"
   },
-  "main": "lib/Spies.js",
+  "main": "lib/StrictSpies.js",
   "files": ["lib/"],
   "engines": {
     "node": ">= 4.0"

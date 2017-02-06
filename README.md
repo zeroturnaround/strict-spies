@@ -11,7 +11,7 @@ A strict alternative for [Jasmine spies][].
 Include in your Jasmine setup file that's run before all tests:
 
 ```js
-import StrictSpies, {toHaveCalls, toHaveSingleCall, toHaveAnyCalls} from "../src/StrictSpies";
+import StrictSpies, {toHaveCalls, toHaveSingleCall, toHaveAnyCalls} from "strict-spies";
 
 beforeEach(function() {
     // Initialize spies container for each test run.
