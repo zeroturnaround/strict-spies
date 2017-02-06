@@ -1,6 +1,6 @@
 {
   "name": "strict-spies",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A strict alternative for Jasmine spies",
   "author": "Rene Saarsoo <nene@triin.net>",
   "keywords": [
@@ -15,7 +15,9 @@
     "url": "git://github.com/zeroturnaround/strict-spies.git"
   },
   "main": "lib/StrictSpies.js",
-  "files": ["lib/"],
+  "files": [
+    "lib/"
+  ],
   "engines": {
     "node": ">= 4.0"
   },
