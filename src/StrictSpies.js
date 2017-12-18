@@ -1,7 +1,7 @@
 /**
  * Helper for creating spies.
  */
-export default class Spies {
+export default class StrictSpies {
     constructor() {
         this.allCalls = [];
     }
