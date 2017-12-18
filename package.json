@@ -22,7 +22,7 @@
     "node": ">= 4.0"
   },
   "jest": {
-    "testRegex": "test/.*Test.js$",
+    "testRegex": "test/jasmineTest.js$",
     "modulePaths": [
       "src/"
     ]
