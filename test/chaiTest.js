@@ -1,13 +1,42 @@
-import {expect} from "chai";
-import StrictSpies from "../src/chai";
+import chai, {expect} from "chai";
+import StrictSpies, {assertions} from "../src/chai";
 
 describe("StrictSpies for Chai", function() {
     beforeEach(function() {
         // Initialize spies container for each test run.
         this.spies = new StrictSpies();
+
+        chai.use(assertions);
     });
 
-    it("initializes this.spies", function() {
-        expect(this.spies).to.be.an.instanceof(StrictSpies);
+    // Helper for testing that reset() functionality works with all the scenarios
+    function resetRemovesAllCallsData() {
+        describe("reset()", function() {
+            beforeEach(function() {
+                this.spies.reset();
+            });
+
+            it("removes all calls data", function() {
+                expect(this.spies).not.to.have.anyCalls;
+                // expect(this.spies).to.have.calls([]);
+            });
+        });
+    }
+
+    describe("when no spies called", function() {
+        beforeEach(function() {
+            // Create a spy, but don't use it
+            this.spies.create("callback");
+        });
+
+        // it("to.have.calls() succeeds with empty calls array", function() {
+        //     expect(this.spies).to.have.calls([]);
+        // });
+
+        it("to.have.anyCalls fails", function() {
+            expect(this.spies).not.to.have.anyCalls;
+        });
+
+        resetRemovesAllCallsData();
     });
 });
