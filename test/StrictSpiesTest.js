@@ -1,4 +1,4 @@
-import StrictSpies, {toHaveCalls, toHaveSingleCall, toHaveAnyCalls} from "../src/StrictSpies";
+import StrictSpies, {toHaveCalls, toHaveSingleCall, toHaveAnyCalls} from "../src/jasmine";
 
 describe("StrictSpies", function() {
     beforeEach(function() {
