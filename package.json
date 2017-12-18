@@ -37,6 +37,8 @@
   },
   "scripts": {
     "prepublish": "rm -rf lib/ && babel src/ --out-dir lib/",
-    "test": "jest"
+    "test": "yarn test:jasmine && yarn test:chai",
+    "test:jasmine": "jest",
+    "test:chai": "mocha --require babel-register test/chaiTest.js"
   }
 }
