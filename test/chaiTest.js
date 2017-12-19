@@ -6,7 +6,11 @@ describe("StrictSpies for Chai", function() {
         // Initialize spies container for each test run.
         this.spies = new StrictSpies();
 
-        chai.use(assertions);
+        chai.use(StrictSpies.assertions);
+    });
+
+    it("exports assertions through class and separately", function() {
+        expect(StrictSpies.assertions).to.equal(assertions);
     });
 
     // Helper for testing that reset() functionality works with all the scenarios

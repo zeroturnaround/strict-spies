@@ -1,5 +1,10 @@
 // Chai integration
-export {default} from "./StrictSpies";
+import StrictSpies from "./StrictSpies";
+
+// Export assertions() both as separate named export
+// and as a static property of StrictSpies class.
+StrictSpies.assertions = assertions;
+export default StrictSpies;
 
 export function assertions({Assertion}, utils) {
     Assertion.addProperty('anyCalls', function() {
