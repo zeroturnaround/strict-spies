@@ -1,6 +1,6 @@
 {
   "name": "strict-spies",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A strict alternative for Jasmine spies",
   "author": "Rene Saarsoo <nene@triin.net>",
   "keywords": [
