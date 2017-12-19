@@ -14,9 +14,10 @@
     "type": "git",
     "url": "git://github.com/zeroturnaround/strict-spies.git"
   },
-  "main": "lib/",
   "files": [
-    "lib/"
+    "lib/",
+    "chai.js",
+    "jasmine.js"
   ],
   "engines": {
     "node": ">= 4.0"
