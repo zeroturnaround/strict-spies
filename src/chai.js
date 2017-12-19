@@ -13,4 +13,10 @@ export function assertions({Assertion}, utils) {
             calls
         );
     });
+
+    Assertion.addMethod('calls', function(expectedCalls) {
+        const calls = this._obj.calls();
+
+        new Assertion(calls).to.deep.equal(expectedCalls);
+    });
 }
