@@ -19,4 +19,10 @@ export function assertions({Assertion}, utils) {
 
         new Assertion(calls).to.deep.equal(expectedCalls);
     });
+
+    Assertion.addMethod('singleCall', function(...expectedCall) {
+        const calls = this._obj.calls();
+
+        new Assertion(calls).to.deep.equal([expectedCall]);
+    });
 }

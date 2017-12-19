@@ -39,4 +39,32 @@ describe("StrictSpies for Chai", function() {
 
         resetRemovesAllCallsData();
     });
+
+    describe("when single spy called", function() {
+        beforeEach(function() {
+            const mySpy = this.spies.create("callback");
+
+            this.returnValue = mySpy("hello", "world");
+        });
+
+        it("returns undefined", function() {
+            expect(this.returnValue).to.equal(undefined);
+        });
+
+        it("to.have.singleCall() checks that it was called just once", function() {
+            expect(this.spies).to.have.singleCall("callback", "hello", "world");
+        });
+
+        it("to.have.calls() can also be used, but it's a bit more verbose", function() {
+            expect(this.spies).to.have.calls([
+                ["callback", "hello", "world"],
+            ]);
+        });
+
+        it("to.have.anyCalls succeeds", function() {
+            expect(this.spies).to.have.anyCalls;
+        });
+
+        resetRemovesAllCallsData();
+    });
 });
