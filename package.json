@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git://github.com/zeroturnaround/strict-spies.git"
   },
-  "main": "lib/StrictSpies.js",
+  "main": "lib/",
   "files": [
     "lib/"
   ],
