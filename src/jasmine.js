@@ -1,5 +1,5 @@
 // Jasmine integration
-export {default} from "./StrictSpies";
+import StrictSpies from "./StrictSpies";
 
 /**
  * Jasmine assertion to check all calls to spies.
@@ -78,3 +78,9 @@ export function toHaveAnyCalls() {
         }
     };
 }
+
+// Export assertions() both as separate named exports
+// and as a static property of StrictSpies class.
+export const assertions = {toHaveCalls, toHaveSingleCall, toHaveAnyCalls};
+StrictSpies.assertions = assertions;
+export default StrictSpies;

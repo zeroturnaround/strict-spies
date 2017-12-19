@@ -1,12 +1,16 @@
-import StrictSpies, {toHaveCalls, toHaveSingleCall, toHaveAnyCalls} from "../src/jasmine";
+import StrictSpies, {assertions} from "../src/jasmine";
 
-describe("StrictSpies", function() {
+describe("StrictSpies for Jasmine", function() {
     beforeEach(function() {
         // Initialize spies container for each test run.
         this.spies = new StrictSpies();
 
         // Register Spies-specific assertions to be used insited of Jasmine built-in spy-assertions
-        jasmine.addMatchers({toHaveCalls, toHaveSingleCall, toHaveAnyCalls});
+        jasmine.addMatchers(StrictSpies.assertions);
+    });
+
+    it("exports assertions through class and separately", function() {
+        expect(StrictSpies.assertions).toBe(assertions);
     });
 
     // Helper for testing that reset() functionality works with all the scenarios
