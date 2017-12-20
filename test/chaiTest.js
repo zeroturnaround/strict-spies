@@ -1,5 +1,5 @@
 import chai, {expect} from "chai";
-import StrictSpies, {assertions} from "../src/chai";
+import StrictSpies, {assertions} from "../chai";
 
 describe("StrictSpies for Chai", function() {
     beforeEach(function() {

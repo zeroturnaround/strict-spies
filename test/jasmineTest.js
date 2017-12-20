@@ -1,4 +1,4 @@
-import StrictSpies, {assertions} from "../src/jasmine";
+import StrictSpies, {assertions} from "../jasmine";
 
 describe("StrictSpies for Jasmine", function() {
     beforeEach(function() {
